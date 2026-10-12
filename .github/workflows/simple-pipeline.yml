@@ -1,0 +1,19 @@
+name: Classroom CI-CD Demo 2026
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build_stage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Simulate Build
+        run: |
+          echo "=== STARTING BUILD STAGE ==="
+          echo "Installing application dependencies..."
+          echo "Build finished successfully!"
